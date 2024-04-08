@@ -14,7 +14,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<CommunalWazeContext>(options => options.UseSqlServer("Server= DESKTOP-S16FV2M\\SQLEXPRESS; Database= CommunalWaze;TrustServerCertificate=True;Trusted_Connection=True;"));
+builder.Services.AddDbContext<CommunalWazeContext>(options => options.UseSqlServer("Server= MY_SERVER; Database= CommunalWaze;TrustServerCertificate=True;Trusted_Connection=True;"));
 
 builder.Services.AddAutoMapper(typeof(Program));
 
