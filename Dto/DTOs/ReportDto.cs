@@ -1,4 +1,4 @@
-﻿using Dal.models;
+﻿using Dal.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dto.DTOs

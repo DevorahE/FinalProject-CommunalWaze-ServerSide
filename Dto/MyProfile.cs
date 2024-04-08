@@ -14,11 +14,11 @@ namespace Bll
 
             CreateMap<ReportsCategory, ReportsCategoryDTO>().ReverseMap();
 
-            CreateMap<Report, ReportDto>().ForMember(dest => dest.Data, opt => opt.MapFrom(src => src.Data.ToString("dd-MM-yyyy")))
+            CreateMap<Report, ReportDto>().ForMember(dest => dest.Data, opt => opt.MapFrom(src =>  src.Data.ToString("dd-MM-yyyy") ))
                 .ForMember(dest => dest.ColorCategory, opt => opt.MapFrom(src => src.IdCategoryNavigation.ColorCategory))
                 .ForMember(dest => dest.NameCategory, opt => opt.MapFrom(src => src.IdCategoryNavigation.NameCategory));
 
-            CreateMap<ReportDto, Report>().ForMember(dest => dest.Data, opt => opt.MapFrom(src => DateTime.Parse(src.Data)));
+            CreateMap<ReportDto, Report>().ForMember(dest => dest.Data, opt => opt.MapFrom(src => DateOnly.Parse(src.Data)));
 
 
         }
